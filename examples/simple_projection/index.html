@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://leafletjs.com/examples/crs-simple/crs-simple-example1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Leaflet начало - Простая проекция</title>
+
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+    <link rel="stylesheet" href="../../lib/leaflet.css" >
+    <script src="../../lib/leaflet.js"></script>
+
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		#map {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+
+	
+</head>
+<body>
+
+<div id="map" ></div>
+<script>
+
+	var map = L.map('map', {
+		crs: L.CRS.Simple
+	});
+
+	var bounds = [[0,0], [1000,1000]];
+	var image = L.imageOverlay('uqm_map_full.png', bounds).addTo(map);
+
+	map.fitBounds(bounds);
+
+</script>
+
+
+
+
+
+</body></html>
